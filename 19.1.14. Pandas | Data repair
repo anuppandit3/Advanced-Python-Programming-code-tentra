@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+
+# Create a DataFrame with missing values (NaN)
+df = pd.DataFrame({
+    'A': [1, 5, np.nan, 9],
+    'B': [2, np.nan, 10, 14],
+    'C': [3, 7, 11, 15],
+    'D': [4, 8, np.nan, 16]
+})
+
+
+print(df)
+
+# Fill NaN values with the mean of each column (ignores NaN for columns without missing data)
+df_filled = df.copy()  # Create a copy of the DataFrame to avoid modifying the original
+
+# Replace missing values with the mean of each column (calculated column-wise)
+df_filled = df_filled.fillna(df_filled.mean())
+
+
+
