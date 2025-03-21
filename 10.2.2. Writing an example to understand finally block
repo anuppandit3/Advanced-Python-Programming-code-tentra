@@ -1,0 +1,36 @@
+'''#try:
+try:
+    # Take two inputs from the user and strip any leading/trailing spaces
+    a = input("a: ").strip()
+    b = input("b: ").strip()
+
+    # If either input is empty or invalid (non-numeric), treat it as an invalid input
+    if not a or not b:
+        print("exception occurred")
+    else:
+        try:
+            # Try to convert inputs to floats
+            a = float(a)  # Try converting a to float
+            b = float(b)  # Try converting b to float
+
+            # Check if either of the inputs is a float, print "exception occurred"
+            if not a.is_integer() or not b.is_integer():
+                print("exception occurred")
+
+            # Perform arithmetic operations (this can throw exceptions)
+            c = a + b
+            try:
+                d = a / b  # This could raise an ArithmeticError if b is 0
+                # If both a and b are valid integers, print "try successful"
+                if a.is_integer() and b.is_integer():
+                    print("try successful")  # Only print for integers
+            except ArithmeticError:
+                # Catch division by zero or any arithmetic related error
+                print("arithmetic error occurred ")
+
+        except ValueError:
+            # Catch invalid value errors (non-numeric inputs)
+            print("exception occurred")
+
+except Exception:
+    # Catch any other unexpected errors
