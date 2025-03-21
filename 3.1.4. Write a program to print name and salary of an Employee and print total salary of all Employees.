@@ -1,0 +1,35 @@
+class Employee:
+    def __init__(self, name, salary):
+        # Initialize the name and salary of the employee
+        self.name = name
+        self.salary = salary
+
+    def displayEmployee(self):
+        # Function to display the employee's details
+        print(f'name: {self.name}')
+        print(f'salary: {self.salary}')
+        print(f'name: {self.name}, salary: {self.salary}')
+
+# Main logic
+def main():
+    employees = []
+
+    # Taking the number of employees input
+    num_employees = int(input("Enter the number of employees: "))
+
+    # Loop to get employee details
+    for _ in range(num_employees):
+        name = input("Enter employee name: ")
+        salary = int(input("Enter employee salary: "))
+        
+        # Create Employee object and store it in the employees list
+        emp = Employee(name, salary)
+        employees.append(emp)
+
+    # Display details of all employees
+    for emp in employees:
+        emp.displayEmployee()
+
+# Calling the main function to execute the program
+if __name__ == "__main__":
+    main()
