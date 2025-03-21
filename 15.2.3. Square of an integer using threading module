@@ -1,0 +1,36 @@
+'''
+import 
+
+
+# write a function to add numbers to the queue
+def add_numbers(numbers, num_queue):
+
+
+
+# write a function to calculate squares of numbers from the queue
+def calculate_squares(num_queue):
+
+
+
+
+if __name__ == "__main__":
+	user_input = input("Enter a list of integers separated by spaces: ")
+	numbers = [int(num) for num in user_input.split()]
+    # Created a queue to hold the numbers
+	num_queue = queue.Queue()
+
+  
+	adder_thread = threading.Thread(                             )
+	calculator_thread = threading.Thread(                        )
+
+
+
+	print("Program finished!")'''
+
+import threading
+import queue
+
+# Function to add numbers to the queue
+def add_numbers(numbers, num_queue):
+    for num in numbers:
+        num_queue.put(num)  # Add each number to the queue
