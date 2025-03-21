@@ -1,0 +1,26 @@
+import pandas as pd
+
+# Created a sample DataFrame
+data = {'Name': ['John', 'Jane', 'Bob', 'Alice', 'Mike', 'Sarah', 'Tom', 'Emily'],
+        'Age': [25, 30, 35, 40, 45, 28, 32, 38],
+        'City': ['New York', 'London', 'Paris', 'Tokyo', 'Sydney', 'Boston', 'Chicago', 'San Francisco'],
+        'Gender': ['M', 'F', 'M', 'F', 'M', 'F', 'M', 'F']}
+df = pd.DataFrame(data)
+
+# Prompt the user to enter a condition to filter the rows
+condition = input("Enter conditions separated by commas (e.g., 'Age > 30', 'City == \'Paris\'): ")
+
+# Use eval() to filter rows based on the user-provided condition
+# It's safer to use query() as it handles such conditions well.
+selected_rows = df.query(condition)
+
+# Display the original DataFrame
+print("Original DataFrame:")
+print(df)
+
+# Display the selected rows after filtering
+print("Selected Rows:")
+print(selected_rows)
+
+
+
