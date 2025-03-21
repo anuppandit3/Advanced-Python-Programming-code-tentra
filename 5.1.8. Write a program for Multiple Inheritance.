@@ -1,0 +1,36 @@
+#class vehicle:
+
+# write your code here
+class vehicle:
+    '''General Vehicle class'''
+    
+    def __init__(self, name, price, regno):
+        self.name = name
+        self.price = price
+        self.regno = regno
+
+
+class car(vehicle):
+    '''Class car inherits from Vehicle'''
+
+    def __init__(self, name, price, regno, gear):
+        # Initialize the base class (vehicle)
+        super().__init__(name, price, regno)
+        self.gear = gear
+
+
+class boat(vehicle):
+    '''Class boat inherits from vehicle'''
+
+    def __init__(self, name, price, regno):
+        # Initialize the base class (vehicle)
+        super().__init__(name, price, regno)
+
+
+class hover(car, boat):
+    '''Class hovercraft inherits from both car and boat'''
+
+    def __init__(self, name, price, regno, gear):
+        # Initialize both base classes (car and boat)
+        car.__init__(self, name, price, regno, gear)
+        boat.__init__(self, name, price, regno)
