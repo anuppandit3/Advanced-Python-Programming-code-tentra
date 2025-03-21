@@ -1,0 +1,36 @@
+'''import threading
+
+# Complete this function to calculate factorial for a given range
+def calculate_factorial(start, end, result, lock):
+
+
+    # Calculate factorial for the given range
+
+
+    # Acquire the lock to update the shared result
+
+
+
+if __name__ == "__main__":
+	user_input = int(input("Enter a number: "))
+
+    # Create a shared variable to store the result
+
+    
+	lock = threading.Lock() # a lock object
+
+    # Calculate the midpoint to split the factorial calculation into two ranges
+
+
+    # Create two worker threads for factorial calculation
+thread1 = threading.Thread(target=calculate_factorial,          )
+thread2 = threading.Thread(target=calculate_factorial,          )
+
+
+print(f"The factorial of {user_input} is: {result['value']}")'''
+import threading
+
+# Complete this function to calculate factorial for a given range
+def calculate_factorial(start, end, result, lock):
+    # Calculate factorial for the given range
+    partial_result = 1
